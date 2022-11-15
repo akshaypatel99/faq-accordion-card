@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/akshaypatel99/frontend-mentor/tree/main/faq-accordion-card](https://github.com/akshaypatel99/frontend-mentor/tree/main/faq-accordion-card)
+- Solution URL: [https://github.com/akshaypatel99/faq-accordion-card](https://github.com/akshaypatel99/faq-accordion-card)
 - Live Site URL: [https://akshaypatel99.github.io/faq-accordion-card/](https://akshaypatel99.github.io/faq-accordion-card/)
 
 ## My process
