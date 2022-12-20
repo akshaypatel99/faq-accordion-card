@@ -7,7 +7,7 @@
   --dark-grayish-blue: hsl(240, 6%, 50%);
   --light-grayish-blue: hsl(240, 5%, 91%);
   --white: hsl(0, 0%, 100%);
-  --font-size: 12px;
+  --font-size: 0.75rem;
 }
 
 * {
@@ -72,8 +72,8 @@ main {
   padding: 1.5rem;
 }
 
-h1 {
-  font-size: calc(2.5 * var(--font-size));
+.faqs-heading {
+  font-size: 2.5em;
   text-align: center;
   font-weight: 700;
   margin: 1rem 0;
@@ -84,7 +84,7 @@ h1 {
   border-bottom: 1px solid  var(--light-grayish-blue);
 }
 
-.faq-heading {
+.faq-trigger {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -96,39 +96,34 @@ h1 {
   outline-offset: 6px;
 }
 
-.faq-heading:hover {
+.faq-heading:hover, .faq-heading:focus-visible   {
   color: var(--soft-red)
 }
 
 .arrow {
+  display: block;
   width: 9px;
   height: 6px;
 }
 
-.question {
-  font-size: calc(1.1 * var(--font-size));
+.faq-question {
+  font-size: 1.1em;
   font-weight: 400;
 }
 
-.answer {
+.faq-answer {
   color: var(--dark-grayish-blue);
   padding-top: 0.75rem;
   width: 90%;
-  display: none;
 }
 
-.active .question {
+[aria-expanded='true'] .faq-title {
   font-weight: 700;
   color: var(--very-dark-grayish-blue);
 }
 
-.active .arrow {
+[aria-expanded='true'] .arrow {
   transform: rotate(180deg);
-}
-
-.active .answer {
-  display: block;
-  animation: fade-in 0.5s forwards;
 }
 
 #box-desktop {
@@ -179,35 +174,18 @@ footer {
   .faqs {
     width: 460px;
     height: 450px;
-    padding: 1.5rem;
   }
 
-  h1 {
-    font-size: calc(2.5 * var(--font-size));
+  .faqs-heading  {
     text-align: left;
-    font-weight: 700;
-    margin: 1rem 0;
   }
 
   .faq {
-    width: 85%;
-  }
-
-  .active.faq {
+    max-width: 50ch;
     padding: 1.25rem 0;
   }
 
-  .question {
-    font-size: calc(1.2 * var(--font-size));
-  }
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
+  .faq-question {
+    font-size: 1.1em;
   }
 }

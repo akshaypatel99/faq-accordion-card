@@ -1,19 +1,33 @@
-const faqs = document.querySelectorAll('.faq');
-
+const faqTriggers = document.querySelectorAll('.faq-trigger');
 let activeIndex = null;
 
-faqs.forEach((faq, index) => {
-	faq.addEventListener('click', () => {
+faqTriggers.forEach((trigger, index) => {
+	trigger.addEventListener('click', () => {
 		if (activeIndex === null) {
-			faq.classList.toggle('active');
+			// Open selected faq if all faqs are closed
+			trigger.setAttribute('aria-expanded', true);
+			toggleAnswer(trigger, true);
 			activeIndex = index;
 		} else if (activeIndex === index) {
-			faq.classList.toggle('active');
+			// Close faq if already open
+			trigger.setAttribute('aria-expanded', false);
+			toggleAnswer(trigger, false);
 			activeIndex = null;
 		} else {
-			faqs[activeIndex].classList.toggle('active');
-			faq.classList.add('active');
+			// Close open faq
+			faqTriggers[activeIndex].setAttribute('aria-expanded', false);
+			toggleAnswer(faqTriggers[activeIndex], false);
+			// Open selected faq
+			trigger.setAttribute('aria-expanded', true);
+			toggleAnswer(trigger, true);
 			activeIndex = index;
 		}
 	});
 });
+
+function toggleAnswer(element, open) {
+	const answerId = element.getAttribute('aria-controls');
+	const answer = document.getElementById(answerId);
+	if (!open) answer.setAttribute('hidden', true);
+	if (open) answer.removeAttribute('hidden');
+}

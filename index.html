@@ -9,15 +9,13 @@
 			rel="icon"
 			type="image/png"
 			sizes="32x32"
-			href="./images/favicon-32x32.png"
-		/>
+			href="./images/favicon-32x32.png" />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
-			rel="stylesheet"
-		/>
+			rel="stylesheet" />
 
 		<link rel="stylesheet" href="./styles.css" />
 		<title>Frontend Mentor | FAQ Accordion Card</title>
@@ -41,98 +39,154 @@
 					<picture id="woman">
 						<source
 							media="(min-width: 1024px)"
-							srcset="./images/illustration-woman-online-desktop.svg"
-						/>
+							srcset="./images/illustration-woman-online-desktop.svg" />
 						<img
 							src="./images/illustration-woman-online-mobile.svg"
-							alt="Woman online illustration"
-						/>
+							alt="Woman online illustration" />
 					</picture>
 
 					<picture id="shadow">
 						<source
 							media="(min-width: 1024px)"
-							srcset="./images/bg-pattern-desktop.svg"
-						/>
+							srcset="./images/bg-pattern-desktop.svg" />
 						<img
 							src="./images/bg-pattern-mobile.svg"
-							alt="Woman online illustration"
-						/>
+							alt="Woman online illustration" />
 					</picture>
 				</div>
 				<img
 					src="./images/illustration-box-desktop.svg"
 					alt="box illustration"
-					id="box-desktop"
-				/>
+					id="box-desktop" />
 				<section class="faqs">
-					<h1>FAQ</h1>
+					<h1 class="faqs-heading">FAQ</h1>
+
 					<div class="faq">
-						<button class="faq-heading">
-							<h2 class="question">How many team members can I invite?</h2>
-							<img
-								src="./images/icon-arrow-down.svg"
-								alt="arrow icon to open faq"
-								class="arrow"
-							/>
-						</button>
-						<p class="answer">
+						<h2 class="faq-question">
+							<button
+								type="button"
+								class="faq-trigger"
+								id="faq-trigger1"
+								aria-expanded="false"
+								aria-controls="faq-answer1">
+								<span class="faq-title"
+									>How many team members can I invite?</span
+								><img
+									src="./images/icon-arrow-down.svg"
+									alt="arrow icon to open faq"
+									class="arrow" />
+							</button>
+						</h2>
+						<p
+							class="faq-answer"
+							id="faq-answer1"
+							role="region"
+							hidden="true"
+							aria-labelledby="faq-trigger1">
 							You can invite up to 2 additional users on the Free plan. There is
 							no limit on team members for the Premium plan.
 						</p>
 					</div>
+
 					<div class="faq">
-						<button class="faq-heading">
-							<h2 class="question">What is the maximum file upload size?</h2>
-							<img
-								src="./images/icon-arrow-down.svg"
-								alt="arrow icon to open faq"
-								class="arrow"
-							/>
-						</button>
-						<p class="answer">
+						<h2 class="faq-question">
+							<button
+								type="button"
+								class="faq-trigger"
+								id="faq-trigger2"
+								aria-expanded="false"
+								aria-controls="faq-answer2">
+								<span class="faq-title"
+									>What is the maximum file upload size?</span
+								><img
+									src="./images/icon-arrow-down.svg"
+									alt="arrow icon to open faq"
+									class="arrow" />
+							</button>
+						</h2>
+						<p
+							class="faq-answer"
+							id="faq-answer2"
+							role="region"
+							hidden
+							aria-labelledby="faq-trigger2">
 							No more than 2GB. All files in your account must fit your allotted
 							storage space.
 						</p>
 					</div>
+
 					<div class="faq">
-						<button class="faq-heading">
-							<h2 class="question">How do I reset my password?</h2>
-							<img
-								src="./images/icon-arrow-down.svg"
-								alt="arrow icon to open faq"
-								class="arrow"
-							/>
-						</button>
-						<p class="answer">
+						<h2 class="faq-question">
+							<button
+								type="button"
+								class="faq-trigger"
+								id="faq-trigger3"
+								aria-expanded="false"
+								aria-controls="faq-answer3">
+								<span class="faq-title">How do I reset my password?</span
+								><img
+									src="./images/icon-arrow-down.svg"
+									alt="arrow icon to open faq"
+									class="arrow" />
+							</button>
+						</h2>
+						<p
+							class="faq-answer"
+							id="faq-answer3"
+							role="region"
+							hidden
+							aria-labelledby="faq-trigger3">
 							Click “Forgot password” from the login page or “Change password”
 							from your profile page. A reset link will be emailed to you.
 						</p>
 					</div>
+
 					<div class="faq">
-						<button class="faq-heading">
-							<h2 class="question">Can I cancel my subscription?</h2>
-							<img
-								src="./images/icon-arrow-down.svg"
-								alt="arrow icon to open faq"
-								class="arrow"
-							/>
-						</button>
-						<p class="answer">
+						<h2 class="faq-question">
+							<button
+								type="button"
+								class="faq-trigger"
+								id="faq-trigger4"
+								aria-expanded="false"
+								aria-controls="faq-answer4">
+								<span class="faq-title">Can I cancel my subscription?</span
+								><img
+									src="./images/icon-arrow-down.svg"
+									alt="arrow icon to open faq"
+									class="arrow" />
+							</button>
+						</h2>
+						<p
+							class="faq-answer"
+							id="faq-answer4"
+							role="region"
+							hidden
+							aria-labelledby="faq-trigger4">
 							Yes! Send us a message and we&apos;ll process your request no
 							questions asked.
 						</p>
 					</div>
+
 					<div class="faq">
-						<button class="faq-heading">
-							<h2 class="question">Do you provide additional support?</h2>
-							<img
-								src="./images/icon-arrow-down.svg"
-								alt="arrow icon to open faq"
-								class="arrow"
-							/>
-						</button>
-						<p class="answer">
+						<h2 class="faq-question">
+							<button
+								type="button"
+								class="faq-trigger"
+								aria-expanded="false"
+								aria-controls="faq-answer5">
+								<span class="faq-title">Do you provide additional support?</span
+								><img
+									src="./images/icon-arrow-down.svg"
+									alt="arrow icon to open faq"
+									class="arrow" />
+							</button>
+						</h2>
+						<p
+							class="faq-answer"
+							id="faq-answer5"
+							role="region"
+							hidden
+							aria-labelledby="faq-trigger5">
 							Chat and email support is available 24/7. Phone lines are open
 							during normal business hours.
 						</p>
